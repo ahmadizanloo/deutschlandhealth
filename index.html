@@ -16,15 +16,10 @@
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
-        // Initialize the map
+        // Initialize the map without a base layer
         var map = L.map('map').setView([51.1657, 10.4515], 6); // Centered on Germany
 
-        // Add a base layer (OpenStreetMap)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // Add WMS layer from GeoServer
+        // Add only the WMS layer from GeoServer
         var wmsLayer = L.tileLayer.wms('https://dbea-2a02-3037-307-c1fe-8d90-d2da-c4a6-c30e.ngrok-free.app/geoserver/deutschland_health_info/wms', {
             layers: 'deutschland_health_info:deutschland',
             format: 'image/png',
