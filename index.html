@@ -25,7 +25,7 @@
         }).addTo(map);
 
         // Add WMS layer from GeoServer
-        var wmsLayer = L.tileLayer.wms('https://47c8-2a02-3037-307-c1fe-413b-8d39-c2df-dea.ngrok-free.app/geoserver/deutschland_health_info/wms', {
+        var wmsLayer = L.tileLayer.wms('https://47c8-2a02-3037-307-c1fe-413b-8d39-c2df-dea.ngrok-free.app/geoserver/deutschland_health_info/wms?service=WMS&version=1.1.0&request=GetMap&layers=deutschland_health_info:deutschland&bbox=5.865998813138089,47.27036232672038,15.037743335674605,55.05737470143498&width=768&height=652&srs=EPSG:3044&styles=&format=image/png', {
             layers: 'deutschland_health_info:deutschland',
             format: 'image/png',
             transparent: true
